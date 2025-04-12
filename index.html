@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+<!-- Header Section -->
+<header class="header">
+
+<div class="logo" style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; font-weight: 100px; color: red;">
+  PORTFOLIO
+</div>
+
+<!-- Hamburger Menu Icon -->
+<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+<nav class="nav" id="nav">
+  <a href="#home">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</nav>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero" id="home" style="background-image: url('assets/about.jpg'); background-size: cover; background-position: center top;">
+  <div class="hero-content">
+    <h1>Hi, I'm Pawan Kumar</h1>
+    <p>Android Developer | Kotlin | Jetpack Compose Enthusiast</p>
+
+    <!-- ✅ Download CV Button here -->
+    <a href="assets/Pawan_Pandit_CV.pdf" download class="download-cv-btn">Download CV</a>
+  </div>
+</section>
+ 
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="card-grid">
+      <!-- Project Card Example -->
+      <div class="card">
+        <img src="assets/work1.jpg" alt="Project 1">
+        <div class="project-info">
+          <h3>Project 1</h3>
+          <a href="https://github.com/yourusername/project1" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <p>A short description of the project.</p>
+      </div>
+
+      <div class="card">
+        <img src="assets/work1.jpg" alt="Project 2">
+        <div class="project-info">
+          <h3>Project 2</h3>
+          <a href="https://github.com/yourusername/project2" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <p>A short description of the project.</p>
+      </div>
+
+      <div class="card">
+        <img src="assets/work1.jpg" alt="Project 3">
+        <div class="project-info">
+          <h3>Project 3</h3>
+          <a href="https://github.com/yourusername/project3" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <p>A short description of the project short description of the project short description of the project short description of the project short description of the project short description of the project.</p>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Kotlin</li>
+      <li>Jetpack Compose</li>
+      <li>Firebase</li>
+      <li>Room Database</li>
+      <li>Coroutines</li>
+      <li>MVVM Architecture</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <h2>Work Experience</h2>
+    <div class="experience-path">
+      <div class="job">
+        <div class="job-marker"></div>
+        <div class="job-content">
+          <h3>Android Intern</h3>
+          <p><strong>XYZ Tech Solutions</strong> | Jan 2024 - June 2024</p>
+          <p>Worked on building UI components with Jetpack Compose and implementing real-time features using Firebase.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-marker"></div>
+        <div class="job-content">
+          <h3>Freelance Android Developer</h3>
+          <p><strong>Freelance</strong> | Aug 2024 - Present</p>
+          <p>Developed apps for clients using clean architecture principles and best practices in Android development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="assets/about.jpg" alt="Pawan Pandit" class="about-photo" />
+
+    <div class="about-text">
+      <p>I'm <strong>Pawan Kumar</strong>, a passionate developer learning <em>Kotlin</em>, <em>Jetpack Compose</em>, and building cool apps. I have a strong interest in creating seamless and efficient mobile applications that provide value to users.</p>
+      <p>I enjoy solving problems, creating intuitive user interfaces, and continuously improving my skills to deliver high-quality applications. My journey in Android development has been fueled by curiosity and a drive to stay updated with the latest technologies and trends in the industry.</p>
+      <p>When I'm not coding, I like exploring new tools, contributing to open-source projects, and sharing knowledge with the developer community. I believe in lifelong learning and strive to grow both personally and professionally.</p>
+    
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <h2>Education</h2>
+        <ul class="education-list">
+            <li>
+                <strong>University:</strong> Sarala Birla University <span>(2022 - 2025)</span>
+            </li>
+            <li>
+                <strong>College:</strong> Annnada College Hazaribagh <span>(2020 - 2022)</span>
+            </li>
+            <li>
+                <strong>School:</strong> Appreciable Public School <span>(2019 - 2020)</span>
+            </li>
+        </ul>
+    </section>
+    
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Certification Section -->
+<section id="certifications" class="section">
+  <h2>Certifications</h2>
+  <div class="certifications-grid">
+    <div class="certification-card">
+      <h3>Android Developer Certification</h3>
+      <p><strong>Google</strong> <span>(2023)</span></p>
+      <a href="https://developer.android.com/certification" target="_blank" class="certification-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </div>
+    <div class="certification-card">
+      <h3>Kotlin for Android Developers</h3>
+      <p><strong>JetBrains Academy</strong> <span>(2022)</span></p>
+      <a href="https://www.jetbrains.com/academy/" target="_blank" class="certification-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </div>
+    <div class="certification-card">
+      <h3>Firebase Essentials</h3>
+      <p><strong>Udemy</strong> <span>(2021)</span></p>
+      <a href="https://www.udemy.com/course/firebase-essentials/" target="_blank" class="certification-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><i class="fa-solid fa-phone"></i> +91 7296011154</p>
+      <p><i class="fa-solid fa-envelope"></i> thepawankumar1122@gmail.com</p>
+    </div>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with <span style="color: red;">&#10084;</span> by</p>
+    <p style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; font-weight: 100px; color: red; ">PAWAN KUMAR</p>
+    <div class="social-links">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+    </div>
+    <p>&copy; 2024 All rights reserved.</p>
+  </footer>
+
+
+
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
+
+
+</body>
+</html>
