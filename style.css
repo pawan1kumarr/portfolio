@@ -1,4 +1,9 @@
 /* === Global Styles === */
+:root {
+  --card-bg-color: #292929; /* Darker, theme-consistent color */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color for consistent styling */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,24 +16,54 @@ body {
   color: #fff;
 }
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  scroll-padding-top: 80px; /* Adjust for sticky header */
+}
+
+/* Fallback for browsers that do not support scroll-behavior */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll; /* Ensures scrollbars are always visible */
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 /* === Header Section === */
 .header {
+  height: 80px;
+  width: 100%;
   background-color: #1f1f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 999;
+  color: #fff;
 }
 
 .logo {
   font-size: 2rem;
   font-weight: 800;
   color: red;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .nav a {
@@ -45,15 +80,6 @@ body {
 
 
 /* === Base Header Styles === */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #111;
-  color: #fff;
-  position: relative;
-}
 
 
 /* === Navigation Styles === */
@@ -126,11 +152,11 @@ body {
 }
 
   .hero-content h1{
-    color: #ffcc00; /* Bright golden yellow for an attractive and vibrant look */
+    color: #ffcc00;
   }
 
   .hero-content p {
-    color: #104307; /* Bright golden yellow for a vibrant and attractive look */
+    color: #104307; /* Green shade for a vibrant and attractive look */
     font-size: 1.5rem; /* Slightly larger font for emphasis */
     font-weight: bold; /* Bold text for better visibility */
 
@@ -151,15 +177,9 @@ body {
   font-size: 1.25rem;
   margin: 1rem 0;
 }
-
-.cta {
-  background: #ff3c00;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1rem;
-  display: inline-block;
+.hero h1 {
+  font-size: 3rem;
+  color: #ffcc00; /* Bright golden yellow for an attractive and vibrant look */
 }
 
 .cta:hover {
@@ -271,7 +291,7 @@ h2 {
   height: 24px;
 }
 .card {
-  background: #1e1e1e;
+  background: var(--card-bg-color);
   padding: 1rem;
   border-radius: 8px;
   transition: transform 0.3s;
@@ -279,8 +299,7 @@ h2 {
 
 .card:hover {
   transform: scale(1.03);
-  background: rgba(60, 255, 0, 0.443);
-
+  background: rgba(255, 60, 0, 0.5); /* Subdued orange-red for theme consistency */
 }
 
 
@@ -313,7 +332,7 @@ h2 {
 }
 
 .skills-list li {
-  background: #292929;
+  background: var(--card-bg-color);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   list-style: none;
@@ -471,7 +490,7 @@ button:hover {
 }
 
 /* === Skills Section (Alternate) === */
-.skills-list {
+.alternate-skills-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -479,7 +498,7 @@ button:hover {
   padding: 0;
 }
 
-.skills-list li {
+.alternate-skills-list li {
   background-color: #e50914;
   color: white;
   padding: 0.5rem 1rem;
@@ -564,31 +583,162 @@ button:hover {
 
 
 .certification-card {
-  background-color: rgba(255, 255, 255, 0.945);
+  background: var(--card-bg-color);  /* Darker, theme-consistent color */
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 4px var(--shadow-color);
+  transition: transform 0.3s ease;
 }
 
 .certification-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgb(36, 224, 3);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.5);
+}
+.certification-card a i {
+  margin: 5px;
+  color: #919107; /* Bright red for emphasis */
+  font-size: 1.2rem; /* Slightly larger for better visibility */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for both transform and color */
 }
 
+.certification-card a i:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+  color: #ff3c00; /* Change to a vibrant orange-red on hover */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certification-card:hover {
+    transform: none;
+  }
+}
+/* The heading is styled with a bold red color (#e50914) to draw attention and a font size of 1.5rem for clear readability. */
 .certification-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #e50914;
 }
 
+
 .certification-card p {
   font-size: 1rem;
-  color: #010101;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
   .certifications-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* === Services Section === */
+#services {
+  background: linear-gradient(to right, #1a1a1a, #0f0f0f);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--card-bg-color);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(255, 60, 0, 0.4);
+}
+
+.service-card img {
+  width: 70%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #e50914;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #eeeded;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 60, 0, 0.1), rgba(0, 0, 0, 0.3));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Animation for fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Styles for Services Section */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  #services h2 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
   }
 }
